@@ -1,0 +1,51 @@
+
+<div class="row">
+<div class="header-top d-flex">
+ 
+    <div class="col-lg-8 col-md-8">
+    <div class="logo_title">
+      <div class="header-title">MACKEIL ISPAT & FORGING LTD.</div>
+      <div class="header-subtitle">Visitor Gate Entry Management System</div>
+    </div>
+   </div>
+   <div class="col-lg-2 col-md-2">
+    <div class="user-info">
+      <mat-icon class="per_icon">person</mat-icon>
+      <div>
+        <div>User: Sanjeev Sharma (Supervisor)</div>
+        <div>Date: 22-07-2025 3:30 PM</div>
+      </div>
+    </div>
+    </div>
+<div class="col-lg-2 col-md-2">
+    <div class="header-buttons">
+      <button class="btn_central">Central Gate</button>
+      <button class="btn_logout">Logout</button>
+    </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Navigation Bar -->
+   <div>
+<div class="row main-menu">
+  <div class="col-lg-8 col-md-8">
+  <nav>
+  <ul>
+    <li *ngFor="let item of navigationItems" class="menu-item" [class.has-submenu]="item.children">
+      <a [routerLink]="item.route">{{ item.label }}</a>
+
+      <ul class="submenu" *ngIf="item.children">
+        <li *ngFor="let child of item.children">
+          <a [routerLink]="child.route">{{ child.label }}</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<div class="col-lg-4 col-md-4 reg_text">
+  <h2>VISITOR REGISTRATION</h2>
+</div>
+</div>
+</div>

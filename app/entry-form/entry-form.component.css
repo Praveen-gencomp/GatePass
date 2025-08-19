@@ -1,0 +1,12 @@
+.preview-img {
+  width: 100px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.camera-view video {
+  border: 2px solid #007bff;
+  border-radius: 8px;
+}

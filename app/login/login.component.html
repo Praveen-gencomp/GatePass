@@ -1,0 +1,43 @@
+<div class="login_head">
+        <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 m-0">
+            <img src="assets/images/Login.jpeg" class="login_img" width="100%" height="100%"/>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+         <div class="login_form">
+           <img src="assets/images/visitor_img.jpeg" class="login_img" width="100%" height="250px"/>
+            <div class="login_cred">
+            <mat-form-field color="#2a6dd9" class="w-100 width_mat"  appearance="legacy" >
+                <div class="login_icon">
+                 <mat-icon>person</mat-icon>
+                 <span>Login Id</span>
+                 </div>
+                  <input matInput [(ngModel)]="loginId">
+                
+            </mat-form-field>
+              
+              <mat-form-field color="#2a6dd9" class="w-100 width_mat"  appearance="legacy">
+                <div class="login_icon">
+                 <mat-icon>person</mat-icon>
+                 <span>Password</span>
+                 </div>
+                <input matInput [(ngModel)]="password">
+              </mat-form-field>
+              
+              <div class="raised-btn-component">
+                <!-- <button  mat-raised-button class="big-btn-with-icon-padding login_btn" >
+                  Sign In <mat-icon>exit_to_app</mat-icon>
+                </button> -->
+                <button mat-raised-button class="big-btn-with-icon-padding login_btn" color="primary" (click)="login()">
+                  Sign In <mat-icon>exit_to_app</mat-icon>
+                </button>
+                </div>
+                </div>
+         </div>
+         <div class="sign_proceed">
+         <p>MACKEIL ISPAT & FORGING LTD. 2025</p>
+        </div>
+        </div>
+        
+        </div>
+</div>

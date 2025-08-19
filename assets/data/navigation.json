@@ -1,0 +1,26 @@
+[
+  {
+    "label": "New Visitor",
+    "route": "/entry_form"
+  },
+  {
+    "label": "Reports",
+    
+    "children":[
+      { "label": "Reports 1", "route": "/reports1" },
+      { "label": "Reports 2", "route": "/reports2" }
+
+        ],
+    
+    "route": "/reports"
+  },
+   {
+    "label": "Help",
+    "route": "/help"
+  },
+  {
+    "label": "Backup",
+    "route": "/backup"
+  }
+
+]

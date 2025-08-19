@@ -1,0 +1,252 @@
+.login_head
+{
+    width: 950px;
+    margin: 5% auto;
+    border-radius: 10px;
+}
+.sign_proceed p
+{
+    font-size: 14px;
+    color: #998b8a;
+    margin: 20px 0px;
+}
+.login_btn
+{
+    background: #b01712 !important;
+    color: #fff !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    width: 135px;
+    border-radius: 15px !important;
+    margin: 10px 0px;
+}
+.login_icon{
+    display: flex; 
+    align-items: center; 
+    gap: 8px;
+}
+.login_cred {
+    background-color: #e2e2e2;
+    padding: 35px;
+    margin-left: -15px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/*********** header  ***********/
+.header-top {
+      background-color: #a70000;
+      color: white;
+      padding: 10px 20px;
+    }
+    .header-title {
+    font-weight: bold;
+    color: #fee587;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+    .header-subtitle {
+      font-size: 14px;
+    }
+    .user-info {
+      display: flex;
+      gap: 10px;
+      font-size: 14px;
+    }
+    .user-info .per_icon {
+      font-size: 30px;
+    }
+    .header-buttons button {
+      margin-left: 10px;
+    }
+    .logo_title
+    {
+      padding: 0px 20px;
+    }
+    .btn_central
+    {
+      background: #e0ffbc;
+    width: 60%;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 12px;
+    border: 3px solid #a7ac35;
+    }
+    .btn_logout
+    {
+      background: #e0ffbc;
+      border-radius: 5px;
+      padding: 5px;
+      width: 25%;
+    font-size: 12px;
+    border: 3px solid #a7ac35;
+    }
+    .navbar-custom {
+      background-color: #f8f9fa;
+      font-weight: bold;
+    }
+   .main-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  background: #fff;
+  
+}
+.main-menu 
+{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.reg_text
+{
+  text-align: right;
+  display: grid;
+  align-items: anchor-center;
+  margin-left: -23px;
+}
+.menu-item {
+  position: relative;
+}
+
+.menu-item > a {
+  display: block;
+  padding: 15px 20px;
+  color: #000;
+  text-decoration: none;
+}
+
+.menu-item:hover > a {
+  background: #444;
+  color: #fff;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #444;
+  display: none !important;
+  min-width: 150px;
+  height: 80px;
+  z-index: 1111;
+}
+
+.submenu li a {
+  padding: 10px 15px;
+  display: block;
+  color: grey;
+  text-decoration: none;
+  overflow-x: hidden;
+  cursor: pointer;
+}
+
+.submenu li a:hover {
+  background: #555;
+  color: #fff !important;
+
+}
+
+/* Show submenu on hover */
+.menu-item:hover .submenu {
+  display: block !important;
+}
+.btn_period
+{
+  background: #e2e2e2;
+  width: 35%;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 12px;
+  border: 3px solid #a7ac35;
+  text-align: center;
+  font-weight: 600;
+  margin-right: 9px;
+}
+.report_btn
+{
+  text-align: right;
+}
+.top_head
+{
+  background: #e8e8e8;
+  padding: 20px 20px;
+}
+.repo_date
+{
+  margin-left: 10px;
+  display: grid;
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.rec_sec
+{
+  background: #0f0f67;
+  padding: 10px;
+}
+.rec_sec p
+{
+  color: #fff;
+  font-size: 15px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type {
+  padding-left: 24px !important;
+}
+.area_text
+{
+  top: -15px !important;
+}
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+.radio_shadow
+{
+  display: inline-grid;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 20px;
+  margin: 0px 8px;
+}
+.visit_btn 
+{
+  color: #fff;
+  border: 3px solid black;
+  background: #b01712 !important;
+  padding: 10px;
+  font-size: 14px;
+  margin: 0px 8px;
+}
+.custom-legacy.mat-focused .mat-form-field-label {
+  color: #b01712 !important;
+}
+
+.custom-legacy.mat-focused .mat-form-field-underline {
+  background: #b01712 !important;
+}
+.image_box
+{
+  width:100% !important;
+    height: 200px;
+    border: 1px solid;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.form_btn
+{
+  border: 3px solid black !important;
+    line-height: 42px !important;
+    width: 125px;
+}
+.sear_icon
+{
+  background: #0000a4;
+    color: #fff;
+    width: 50px !important;
+    height: 45px !important;
+    font-size: 50px !important;
+    padding: 12px 2px !important;
+}
+.wel_text {
+    padding: 20px;
+}
