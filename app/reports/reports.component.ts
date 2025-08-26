@@ -25,7 +25,7 @@ displayedColumns: string[] = ['status', 'in', 'out', 'name', 'telephoneNo', 'ide
         //this.dataSource.data = data;
         this.dataSource.data = data.map(v => ({
   status: v.unitNo, // or derive from API
-  in: v.visitingDateAndTime, // depends on your API field
+  in: v.visitingDateAndTime,
   out: v.checkOutTime,
   name: v.visitorName,
    telephoneNo:v.telephoneNo,

@@ -12,15 +12,20 @@
     <div class="user-info">
       <mat-icon class="per_icon">person</mat-icon>
       <div>
-        <div>User: Sanjeev Sharma (Supervisor)</div>
-        <div>Date: 22-07-2025 3:30 PM</div>
+        <!-- <div>User: Sanjeev Sharma (Supervisor)</div>
+        <div>Date: 22-07-2025 3:30 PM</div> -->
+        <!--  Get data Dynamic-->
+        <div>User: {{ loginUser.userName }} ({{ loginUser.role }})</div>
+    <div>Date: {{ currentDate | date:'dd-MM-yyyy h:mm a' }}</div>
       </div>
     </div>
     </div>
 <div class="col-lg-2 col-md-2">
+  
     <div class="header-buttons">
-      <button class="btn_central">Central Gate</button>
-      <button class="btn_logout">Logout</button>
+      <!-- <button class="btn_central">Central Gate</button> -->
+      &nbsp;&nbsp;
+      <button class="btn_logout" (click)="logout()">Logout</button>
     </div>
     </div>
   </div>

@@ -9,7 +9,7 @@ import { EntryFormComponent } from './entry-form/entry-form.component';
 import { SharedModule } from './shared/shared.module';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { ReportFormComponent } from './report-form/report-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReportsComponent,
     EntryFormComponent,
      WelcomeComponent,
+     ReportFormComponent
      
   ],
 

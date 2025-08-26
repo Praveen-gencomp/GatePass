@@ -5,6 +5,7 @@ import { ReportsComponent } from './reports/reports.component';
 import { EntryFormComponent } from './entry-form/entry-form.component';
 import { LayoutComponent } from './layout/layout.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { ReportFormComponent } from './report-form/report-form.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -15,6 +16,8 @@ const routes: Routes = [
       { path: 'welcome', component: WelcomeComponent},
       { path: 'reports', component: ReportsComponent },
       { path: 'entry_form', component: EntryFormComponent },
+      // { path: 'report_form', component: ReportFormComponent },
+      {path: 'report_form/:unitNo', component: ReportFormComponent}
       // Add more routes here
     ]
   },

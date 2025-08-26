@@ -65,7 +65,7 @@
     }
     .btn_central
     {
-      background: #e0ffbc;
+    background: #e0ffbc;
     width: 60%;
     border-radius: 5px;
     padding: 5px;
@@ -91,7 +91,6 @@
   margin: 0;
   display: flex;
   background: #fff;
-  
 }
 .main-menu 
 {
@@ -107,19 +106,16 @@
 .menu-item {
   position: relative;
 }
-
 .menu-item > a {
   display: block;
   padding: 15px 20px;
   color: #000;
   text-decoration: none;
 }
-
 .menu-item:hover > a {
   background: #444;
   color: #fff;
 }
-
 .submenu {
   position: absolute;
   top: 100%;
@@ -130,7 +126,6 @@
   height: 80px;
   z-index: 1111;
 }
-
 .submenu li a {
   padding: 10px 15px;
   display: block;
@@ -139,11 +134,9 @@
   overflow-x: hidden;
   cursor: pointer;
 }
-
 .submenu li a:hover {
   background: #555;
   color: #fff !important;
-
 }
 
 /* Show submenu on hover */
@@ -205,7 +198,7 @@
 {
   display: inline-grid;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  padding: 20px;
+  padding: 15px;
   margin: 0px 8px;
 }
 .visit_btn 
@@ -220,33 +213,55 @@
 .custom-legacy.mat-focused .mat-form-field-label {
   color: #b01712 !important;
 }
-
 .custom-legacy.mat-focused .mat-form-field-underline {
   background: #b01712 !important;
 }
 .image_box
 {
   width:100% !important;
-    height: 200px;
-    border: 1px solid;
-    padding: 10px;
-    margin-bottom: 20px;
+  height: 175px;
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 .form_btn
 {
-  border: 3px solid black !important;
-    line-height: 42px !important;
-    width: 125px;
+  border: 2px solid black !important;
+    line-height: 35px !important;
+    width: 108px;
+    border-radius: 5px !important;
 }
 .sear_icon
 {
   background: #0000a4;
     color: #fff;
-    width: 50px !important;
-    height: 45px !important;
-    font-size: 50px !important;
-    padding: 12px 2px !important;
+    width: 35px !important;
+    height: 32px !important;
+    font-size: 30px !important;
+    padding: 5px 4px !important;
 }
 .wel_text {
-    padding: 20px;
+  padding: 20px;
+}
+.cap_btn
+{
+  border: 2px solid !important;
+    line-height: 35px !important;
+    border-radius: 5px !important;
+
+}
+.vdo_prev
+{
+  margin-top: -20px;
+  margin-left: -30px;
+}
+.login_img
+{
+  margin-top: -10px;
+}
+.login_date
+{
+  background: #000;
+  color: #fff;
+  padding: 15px;
 }
