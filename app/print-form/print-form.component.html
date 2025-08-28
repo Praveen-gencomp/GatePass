@@ -1,0 +1,370 @@
+<div class="row top_head">
+    <div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="row">
+      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+        <div class="image_box">
+          <!-- <div *ngIf="capturedImage">
+                <img [src]="capturedImage" width="135px" height="150px" />
+                </div> -->
+                 <div class="col-lg-6">
+         <img *ngIf="visitor?.capturedImage" [src]="visitor.capturedImage" 
+              alt="Visitor Image" width="135px" height="150px" />
+            </div>
+            <!-- <img *ngIf="visitor?.capturedImage" 
+     [src]="'data:image/jpeg;base64,' + visitor.capturedImage" 
+     alt="Visitor Image" width="135px" height="150px" /> -->
+
+          <!-- <div class="mt-4" *ngIf="capturedImage">
+    <h5>Captured Image Preview</h5>
+    <div class="frame">
+    </div>
+  </div> -->
+      </div>
+      </div>
+      </div>
+      <div class="row">
+        <h3>Visitor Information</h3>
+        <br><br>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <mat-form-field class="w-100 custom-legacy" appearance="legacy">
+              <mat-label><b>Identification No. :</b></mat-label>
+              <input matInput name="idenno" [value]="visitor.identificationNo">
+            </mat-form-field>
+          </div>
+          
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <mat-form-field class="w-100 custom-legacy" appearance="legacy">
+              <mat-label><b>Visitor Name :</b></mat-label>
+              <input matInput name="visname" [value]="visitor.visitorName">
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <mat-form-field appearance="legacy" class="w-100 custom-legacy">
+            <mat-label>Gender</mat-label>
+            <!-- <mat-select>
+                <mat-option value="option1">Male</mat-option>
+                <mat-option value="option2">Female </mat-option>
+                <mat-option value="option3">Option 3</mat-option>
+            </mat-select> -->
+            <input matInput name="gender" [value]="visitor.gender">
+            </mat-form-field>
+          </div>
+          
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <mat-form-field class="w-100 custom-legacy" appearance="legacy">
+              <mat-label>Document Type :</mat-label>
+              <input matInput name="document" [value]="visitor.documentType">
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <mat-form-field appearance="legacy" class="w-100 custom-legacy">
+            <mat-label>Date</mat-label>
+            <input matInput name="visitingDateAndTime" [(ngModel)]="visitor.visitingDateAndTime">
+            <!-- <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker> -->
+            </mat-form-field>
+          </div>
+          
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <mat-form-field class="w-100 custom-legacy" appearance="legacy">
+              <mat-label>License Number :</mat-label>
+              <input matInput name="licenseNo" [value]="visitor.licenseNumber">
+            </mat-form-field>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+        <h3>Visitor Address</h3>
+        <br><br>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <mat-form-field class="w-100 custom-legacy" appearance="legacy">
+              <mat-label> Address :</mat-label>
+              <input matInput name="add" [value]="visitor.address">
+            </mat-form-field>
+          </div>
+          
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <mat-form-field class="w-100 custom-legacy" appearance="legacy">
+              <mat-label> Town :</mat-label>
+              <input matInput name="town" [value]="visitor.town">
+            </mat-form-field>
+          </div>
+        </div>
+
+         <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <mat-form-field class="w-100 custom-legacy" appearance="legacy">
+              <mat-label> Postcode :</mat-label>
+              <input matInput name="postcode" [value]="visitor.postcode">
+            </mat-form-field>
+          </div>
+          
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <mat-form-field class="w-100 custom-legacy" appearance="legacy">
+              <mat-label> State :</mat-label>
+              <input matInput name="state" [value]="visitor.state">
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <mat-form-field class="w-100 custom-legacy" appearance="legacy">
+              <mat-label> Country :</mat-label>
+              <input matInput name="country" [value]="visitor.country">
+            </mat-form-field>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+        <h3>Other Details</h3>
+        <br><br>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <mat-form-field class="w-100 custom-legacy" appearance="legacy">
+              <mat-label>Telephone No. :</mat-label>
+              <input matInput name="telephoneNo" [value]="visitor.telephoneNo">
+            </mat-form-field>
+          </div>
+          
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <mat-form-field class="w-100 custom-legacy" appearance="legacy">
+              <mat-label>Vehicle No. :</mat-label>
+              <input matInput name="vehicleNumber" [value]="visitor.vehicleNumber">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <mat-form-field appearance="legacy" class="w-100 custom-legacy">
+            <mat-label>Vehicle Type</mat-label>
+            <input matInput name="vehicleType" [value]="visitor.vehicleType">
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <mat-form-field appearance="legacy" class="w-100 custom-legacy">
+            <mat-label>Visitor Category</mat-label>
+           <input matInput name="visitorCategory" [value]="visitor.visitorCategory">
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <mat-form-field appearance="legacy" class="w-100 custom-legacy">
+            <mat-label>Company</mat-label>
+            <input matInput name="company" [value]="visitor.company">
+            </mat-form-field>
+          </div>
+           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <mat-form-field class="w-100 custom-legacy" appearance="legacy">
+              <mat-label>Pre-Registered Pass No. :</mat-label>
+              <input matInput name="preRegPassNo" [value]="visitor.preRegPassNo">
+            </mat-form-field>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+        <h3>Visit Details</h3>
+        <br><br>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <mat-form-field class="w-100 custom-legacy" appearance="legacy">
+              <mat-label>No. of Visitors :</mat-label>
+              <input matInput name="noOfVisitors" [value]="visitor.noOfVisitors">
+            </mat-form-field>
+          </div>
+          
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <mat-form-field appearance="legacy" class="w-100 custom-legacy">
+            <mat-label>Purpose of Visit :</mat-label>
+            <input matInput name="purposeOfVisit" [value]="visitor.purposeOfVisit">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <mat-form-field appearance="legacy" class="w-100 custom-legacy">
+            <mat-label>To Meet (Host) :</mat-label>
+            <input matInput name="toMeet" [value]="visitor.toMeet">
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <mat-form-field class="w-100 custom-legacy area_text" appearance="legacy">
+          <mat-label>Host Information</mat-label>
+          <input matInput name="hostInfo" [value]="visitor.hostInfo">
+          </mat-form-field>
+          </div>
+        </div>
+
+         <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <mat-form-field appearance="legacy" class="w-100 custom-legacy">
+            <mat-label> Department Name :</mat-label>
+           <input matInput name="department" [value]="visitor.deptName">
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <mat-form-field class="w-100 custom-legacy area_text" appearance="legacy">
+          <mat-label>Location Information</mat-label>
+          <textarea matInput name="location" [value]="visitor.locationDepartment"></textarea>
+          </mat-form-field>
+          </div>
+        </div>
+         <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <mat-form-field appearance="legacy" class="w-100 custom-legacy">
+            <mat-label>Unit No. :</mat-label>
+            <input matInput name="unitNo" [value]="visitor.unitNo">
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <mat-form-field class="w-100 custom-legacy" appearance="legacy">
+          <mat-label>Permit No. :</mat-label>
+          <input matInput name="permitNo"  [value]="visitor.permitNo">
+          </mat-form-field>
+          </div>
+          </div>
+
+          <div class="row">
+
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <mat-form-field class="w-100 custom-legacy area_text" appearance="legacy">
+          <mat-label>Remarks :</mat-label>
+          <textarea matInput name="remarks" [value]="visitor.remarks"></textarea>
+          </mat-form-field>
+          </div>
+        </div>
+        </div>
+        </div>
+        <div class="raised-btn-component">
+      <button mat-raised-button color="primary" class="big-btn-with-icon-padding form_btn" (click)="printInvoice()">
+        Print
+      </button>
+      </div>
+        </div>
+         
+
+        <div class="row top_head printhidden">
+      <!-- <div class="row top_head" [hidden]="!printSection"> -->
+    <div id="print-section">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="row">
+      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+        <div class="image_box">
+          <!-- <div *ngIf="capturedImage">
+                <img [src]="capturedImage" width="135px" height="150px" />
+                </div> -->
+                 <div class="col-lg-6">
+          <img *ngIf="visitor?.capturedImage" [src]="visitor.capturedImage" 
+            alt="Visitor Image" width="135px" height="150px" />
+              </div>
+              <!-- <img *ngIf="visitor?.capturedImage" 
+     [src]="'data:image/jpeg;base64,' + visitor.capturedImage" 
+     alt="Visitor Image" width="135px" height="150px" /> -->
+
+      </div>
+      </div>
+      </div>
+      <div class="row">
+        <h3>Visitor Information</h3>
+        <br><br>
+        <table class="table table-bordered">
+      <tbody>
+          <tr class="w-100">
+              <td class="border-right"><b>Identification No.</b>:</td><td class="border-left">{{visitor.identificationNo}}</td>
+              <td class="border-right"><b>Visitor Name: </b></td><td class="border-left">{{visitor.visitorName}}</td>
+          </tr>
+          <tr class="w-100">
+              <td class="border-right"><b>Gender</b>: </td><td class="border-left">{{visitor.gender}}</td>
+              <td class="border-right"><b>Document Type :</b> </td><td class="border-left">{{visitor.documentType}}</td>
+          </tr>
+           <tr class="w-100">
+              <td class="border-right"><b>Date</b>: </td><td class="border-left">{{visitor.visitingDateAndTime}}</td>
+              <td class="border-right"><b>License Number :</b> </td><td class="border-left">{{visitor.licenseNumber}}</td>
+          </tr>
+          </tbody>
+          </table>
+        </div>
+
+        <br>
+        <div class="row">
+        <h3>Visitor Address</h3>
+        <br><br>
+         <table class="table table-bordered">
+      <tbody>
+          <tr class="w-100">
+              <td class="border-right"><b>Address</b>:</td><td class="border-left">{{visitor.address}}</td>
+              <td class="border-right"><b>Town:</b> </td><td class="border-left">{{visitor.town}}</td>
+          </tr>
+          <tr class="w-100">
+              <td class="border-right"><b>Postcode</b>: </td><td class="border-left">{{visitor.postcode}}</td>
+             <td class="border-right"><b>State : </b></td><td class="border-left">{{visitor.state}}</td>
+          </tr>
+           <tr class="w-100">
+              <td class="border-right" colspan="1"><b>Country</b>: </td><td class="border-left" colspan="3">{{visitor.country}}</td>
+          </tr>
+          </tbody>
+          </table>
+        </div>
+        <br>
+        <div class="row">
+        <h3>Other Details</h3>
+        <br><br>
+<table class="table table-bordered">
+      <tbody>
+          <tr class="w-100">
+              <td class="border-right"><b>Telephone No.</b>: </td><td class="border-left">{{visitor.telephoneNo}}</td>
+              <td class="border-right"><b>Vehicle No.:</b> </td><td class="border-left">{{visitor.vehicleNumber}}</td>
+          </tr>
+          <tr class="w-100">
+              <td class="border-right"><b>Vehicle Type</b>: </td><td class="border-left">{{visitor.vehicleType}}</td>
+              <td class="border-right"><b>Visitor Category :</b> </td><td class="border-left">{{visitor.visitorCategory}}</td>
+          </tr>
+           <tr class="w-100">
+              <td class="border-right"><b>Company</b>:</td><td class="border-left">{{visitor.company}}</td>
+              <td class="border-right"><b>Pre-Registered Pass No. :</b></td><td class="border-left">{{visitor.preRegPassNo}}</td>
+          </tr>
+          </tbody>
+          </table>
+        </div>
+    
+        <br>
+        <div class="row">
+        <h3>Visit Details</h3>
+        <br><br>
+        <table class="table table-bordered">
+      <tbody>
+          <tr class="w-100">
+              <td class="border-right"><b>No. of Visitors </b>: </td><td class="border-left">{{visitor.noOfVisitors}}</td>
+              <td class="border-right"><b>Purpose of Visit:</b> </td><td class="border-left">{{visitor.purposeOfVisit}}</td>
+          </tr>
+          <tr class="w-100">
+              <td class="border-right"><b>To Meet (Host)</b>: </td><td class="border-left">{{visitor.toMeet}}</td>
+              <td class="border-right"><b>Host Information : </b></td><td class="border-left">{{visitor.hostInfo}}</td>
+          </tr>
+           <tr class="w-100">
+              <td class="border-right"><b>Department</b>: </td><td class="border-left">{{visitor.deptName}}</td>
+              <td class="border-right"><b>Location Information :</b> </td><td class="border-left">{{visitor.locationDepartment}}</td>
+          </tr>
+          <tr class="w-100">
+              <td class="border-right"><b>Unit No.</b>: </td><td class="border-left">{{visitor.unitNo}}</td>
+              <td class="border-right"><b>Permit No. :</b> </td><td class="border-left">{{visitor.permitNo}}</td>
+          </tr>
+          <tr class="w-100">
+              <td class="border-right" colspan="1"><b>Remarks</b>: </td><td class="border-left" colspan="3">{{visitor.remarks}}</td>
+          </tr>
+          </tbody>
+          </table>
+        </div>
+        </div>
+        </div>
+        </div>
+         
+      

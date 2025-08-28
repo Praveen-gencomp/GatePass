@@ -6,6 +6,7 @@ import { EntryFormComponent } from './entry-form/entry-form.component';
 import { LayoutComponent } from './layout/layout.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ReportFormComponent } from './report-form/report-form.component';
+import { PrintFormComponent } from './print-form/print-form.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -14,6 +15,8 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       { path: 'welcome', component: WelcomeComponent},
+      // { path: 'print', component: PrintFormComponent},
+      { path: 'print/:unitNo', component: PrintFormComponent},
       { path: 'reports', component: ReportsComponent },
       { path: 'entry_form', component: EntryFormComponent },
       // { path: 'report_form', component: ReportFormComponent },

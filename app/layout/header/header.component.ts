@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { UserService } from 'src/app/services/user.serice';
 
 ;
 
@@ -17,7 +18,7 @@ export class HeaderComponent implements OnInit {
     loginUser: any;
     currentDate: Date = new Date(); // system current date
  navigationItems: any[] = [];
-  constructor(private authService:AuthService, private navigationService:NavigationService, private http:HttpClient, private router:Router) 
+  constructor(private authService:AuthService, private navigationService:NavigationService, private http:HttpClient, private router:Router, private userService: UserService) 
   {   
   }
     ngOnInit(): void {
@@ -39,11 +40,26 @@ export class HeaderComponent implements OnInit {
       this.navigationItems = data;
     });
   }
+// logout() {
+//     // localStorage.removeItem('loginId');
+//     this.router.navigate(['/']);
+//     // window.location.href = '/login';
+//   }
 logout() {
-    // localStorage.removeItem('loginId');
-    this.router.navigate(['/']);
-    // window.location.href = '/login';
-    
+    this.userService.logout().subscribe({
+      next: () => {
+        // Clear storage (if you are saving loginId / token)
+        // localStorage.removeItem('loginId');
+        localStorage.removeItem('unit1');
+        sessionStorage.clear();
+
+        // Navigate to login page
+        this.router.navigate(['/']);
+      },
+      error: () => {
+        alert('Error during logout');
+      }
+    });
   }
   }
 

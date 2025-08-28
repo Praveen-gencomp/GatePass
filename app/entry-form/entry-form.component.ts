@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild, OnDestroy } from '@angular/core';
 import { EntryFormService } from '../services/entry-form.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-entry-form',
@@ -56,7 +57,7 @@ today: Date = new Date();
     capturedImage: ''   // Base64 from <img [src]="capturedImage">
   };
 
-  constructor(private entryFormService: EntryFormService) {}
+  constructor(private entryFormService: EntryFormService, private router: Router) {}
 
   // Optional: start/stop camera if you show a live preview
   startCamera(): void {
@@ -105,7 +106,13 @@ today: Date = new Date();
       next: (response) => {
         console.log('Visitor registered', response);
         const unitNo = response.unitNo ? response.unitNo : (this.visitor.unitNo || '');
+         if (unitNo) {
         alert(' Visitor Registered Successfully  Pass No: ' + unitNo);
+        // alert(' Visitor Registered Successfully  Pass No: ');
+            // ✅ Redirect to printout page with unitNo
+        this.router.navigate(['/print', unitNo]);
+        //  this.router.navigate(['/print']);
+      }
         // (optional) reset
         // this.visitor = { ...defaults };
         // this.capturedImage = '';
@@ -116,9 +123,9 @@ today: Date = new Date();
       }
     });
     //  window.location.reload();
-    setTimeout(() => {
-    window.location.reload();
-  }, 500);
+  //   setTimeout(() => {
+  //   window.location.reload();
+  // }, 500);
   }
 
   ngOnDestroy(): void {
