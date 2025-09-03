@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { ReportsService } from '../services/reports.service';
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-reports',
   templateUrl: './reports.component.html'
  
 })
 export class ReportsComponent implements OnInit {
-displayedColumns: string[] = ['status', 'in', 'out', 'name', 'telephoneNo', 'identity', 'toMeet','department']; // dynamic header names
+   fromDate!: string;
+  toDate!: string;
+  reportData: any[] = [];
+// displayedColumns: string[] = ['status', 'in', 'out', 'name', 'telephoneNo', 'identity', 'toMeet','department']; // dynamic header names
+displayedColumns: string[] = ['unitNo', 'in', 'out', 'name', 'telephoneNo', 'identity', 'toMeet','department'];
   dataSource = new MatTableDataSource<any>([]);
-  constructor(private reportsService:ReportsService) { }
+  constructor(private reportsService:ReportsService, private http: HttpClient) { }
 
   ngOnInit(): void {
     //  const dynamicData = [
@@ -24,14 +29,15 @@ displayedColumns: string[] = ['status', 'in', 'out', 'name', 'telephoneNo', 'ide
         console.log('Visitor data:', data);
         //this.dataSource.data = data;
         this.dataSource.data = data.map(v => ({
-  status: v.unitNo, // or derive from API
+  // status: v.unitNo, // or derive from API
+  unitNo: v.unitNo,
   in: v.visitingDateAndTime,
   out: v.checkOutTime,
-  name: v.visitorName,
+  visitorName: v.visitorName,
    telephoneNo:v.telephoneNo,
-  identity: v.identificationNo,
+  identificationNo: v.identificationNo,
   toMeet:v.toMeet,
-  department:v.deptName
+  deptName:v.deptName
  
   
 }));
@@ -39,6 +45,19 @@ displayedColumns: string[] = ['status', 'in', 'out', 'name', 'telephoneNo', 'ide
       error: (err) => {
         console.error('Error fetching visitor data', err);
       }
+    });
+  }
+
+  getReport() {
+    if (!this.fromDate || !this.toDate) {
+      alert('Please select both dates');
+      return;
+    }
+
+    this.http.get<any[]>(
+      `http://localhost:8080/api/visitors/filter?fromDate=${this.fromDate}&toDate=${this.toDate}`
+    ).subscribe(data => {
+      this.dataSource.data = data;
     });
   }
 

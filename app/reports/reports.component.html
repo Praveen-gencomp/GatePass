@@ -1,9 +1,17 @@
 <div class="row top_head">
   <div class="col-lg-6 col-md-6">
-    <p class="repo_date">Period 01-08-2021 - 30-08-2021</p>
+    <!-- <p class="repo_date">Period 01-08-2021 - 30-08-2021</p> -->
+    
+    <label>From: </label>
+  <input type="date" [(ngModel)]="fromDate">
+
+  <label>To: </label>
+  <input type="date" [(ngModel)]="toDate">
+
   </div>
   <div class="col-lg-6 col-md-6 report_btn">
-    <button class="btn_period">Change Period</button>
+    <!-- <button class="btn_period">Change Period</button> -->
+     <button class="btn_period" (click)="getReport()">Change Period</button>
   </div>
 </div>
 
@@ -15,9 +23,9 @@
   <table mat-table [dataSource]="dataSource" class="w-100">
 
     <!-- Status Column -->
-    <ng-container matColumnDef="status">
+    <ng-container matColumnDef="unitNo">
       <th mat-header-cell *matHeaderCellDef>PASS No.</th>
-      <td mat-cell *matCellDef="let row" [routerLink]="['/report_form', row.status]" class="cursor-pointer">{{ row.status }}</td>
+      <td mat-cell *matCellDef="let row" [routerLink]="['/report_form', row.unitNo]" class="cursor-pointer">{{ row.unitNo }}</td>
     </ng-container>
 
     <!-- In Column -->
@@ -35,7 +43,7 @@
     <!-- Name Column -->
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef>Name</th>
-      <td mat-cell *matCellDef="let row">{{ row.name }}</td>
+      <td mat-cell *matCellDef="let row">{{ row.visitorName }}</td>
     </ng-container>
 
     <!-- Contact No. Column -->
@@ -47,7 +55,7 @@
     <!-- Identity Column -->
     <ng-container matColumnDef="identity">
       <th mat-header-cell *matHeaderCellDef>Identification No.</th>
-      <td mat-cell *matCellDef="let row">{{ row.identity }}</td>
+      <td mat-cell *matCellDef="let row">{{ row.identificationNo }}</td>
     </ng-container>
 
     <!-- Identity Column
@@ -66,7 +74,7 @@
     <!-- Meet to -->
     <ng-container matColumnDef="department">
       <th mat-header-cell *matHeaderCellDef>Department Name</th>
-      <td mat-cell *matCellDef="let row">{{ row.department}}</td>
+      <td mat-cell *matCellDef="let row">{{ row.deptName}}</td>
     </ng-container>
 
 
